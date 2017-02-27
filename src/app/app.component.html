@@ -1,5 +1,12 @@
-<a [routerLink]="['']">Home</a>
-<a [routerLink]="['styling']">Styles</a>
-<a [routerLink]="['hosts']">Hosts</a>
+<a [routerLink]="['']">Home</a>&nbsp;&nbsp;|
+<a [routerLink]="['styling']">Styles</a>&nbsp;&nbsp;|
+<a [routerLink]="['hosts']">Hosts</a>&nbsp;&nbsp;
+<a [routerLink]="['tabs']">Tabs</a>&nbsp;&nbsp;
 
+<hr>
 <router-outlet></router-outlet>
+
+<product-list [productList]="productList"></product-list>
+
+<!-- <hr>
+<div *ngFor="let a of array">{{a}}</div> -->

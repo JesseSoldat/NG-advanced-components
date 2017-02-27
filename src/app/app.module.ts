@@ -7,12 +7,16 @@ import { RouterModule, Routes, Router } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ExampleDef } from './main/example.interface';
 
+import { ProductListComponent, ProductRowComponent } from './product.component';
+
 import { StylesApp, StylesAppModule } from './styling/styling';
 import { HostApp, HostAppModule } from './hosts/host';
+import { TabsApp, Tabset, Tab } from './tabs/tabs';
 
 let examples: ExampleDef[] = [
  {label: 'Styling', name: 'Styling', path: 'styling', component: StylesApp },
  {label: 'Modifying Hosts', name: 'Host', path: 'hosts', component: HostApp },
+ {label: 'Tabs', name: 'Tabs', path: 'tabs', component: TabsApp },
 
 ]; 
 
@@ -23,7 +27,12 @@ const routes: Routes = examples
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductListComponent,
+    ProductRowComponent,
+    TabsApp,
+    Tabset,
+    Tab
   ],
   imports: [
     BrowserModule,

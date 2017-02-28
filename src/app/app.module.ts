@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes, Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
 
 
 import {
@@ -23,6 +22,8 @@ import { TabsApp, Tabset, Tab } from './tabs/tabs';
 import { ContentProjectionApp, Message } from './content-projection/content';
 import { LifecycleApp, OnInitCmp, OnChangeCmp, DoCheckCmp, DoCheckItem, AftersCmp } from './lifecycle/lifecycle';
 import { IfTemplateApp, IfTemplateAppModule } from './templates/if';
+import { ForTemplateApp, ForTemplateAppModule } from './templates/for';
+
 let examples: ExampleDef[] = [
  {label: 'Styling', name: 'Styling', path: 'styling', component: StylesApp },
  {label: 'Modifying Hosts', name: 'Host', path: 'hosts', component: HostApp },
@@ -30,7 +31,7 @@ let examples: ExampleDef[] = [
  {label: 'Content', name: 'Content', path: 'content', component: ContentProjectionApp },
  {label: 'Lifecycle', name: 'Lifecycle', path: 'lifecycle', component: LifecycleApp },
  {label: 'Template', name: 'Template', path: 'template', component: IfTemplateApp },
-
+ {label: 'Template', name: 'Template', path: 'fortemplate', component: ForTemplateApp },
 
 
 ]; 
@@ -61,11 +62,11 @@ const routes: Routes = examples
     BrowserModule,
     FormsModule,
     HttpModule,
-    CommonModule,
     RouterModule.forRoot(routes),
     StylesAppModule,
     HostAppModule,
-    IfTemplateAppModule
+    IfTemplateAppModule,
+    ForTemplateAppModule
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },

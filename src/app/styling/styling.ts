@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Component, ViewEncapsulation } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 
 //----------------------------------------------------
 @Component({
@@ -81,10 +83,19 @@ class NoEncapsulation {
 	<inline-style></inline-style>
 	<native-encapsulation></native-encapsulation>
 	<no-encapsulation></no-encapsulation>
+  <ul>
+    <li *ngFor="let a of array">{{a}}</li>
+  </ul>
 
 	`
 })
-export class StylesApp {}
+export class StylesApp {
+  array: number[];
+
+  constructor(){
+    this.array = [1,2,3,4,5];
+  }
+}
 
 
 const components = [
@@ -95,7 +106,10 @@ const components = [
 ];
 
 @NgModule({
-	declarations: components,
+	declarations: [components],
+  imports: [
+    CommonModule, 
+  ],
 	exports: components
 })
 

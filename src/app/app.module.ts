@@ -23,6 +23,9 @@ import { ContentProjectionApp, Message } from './content-projection/content';
 import { LifecycleApp, OnInitCmp, OnChangeCmp, DoCheckCmp, DoCheckItem, AftersCmp } from './lifecycle/lifecycle';
 import { IfTemplateApp, IfTemplateAppModule } from './templates/if';
 import { ForTemplateApp, ForTemplateAppModule } from './templates/for';
+import { OnPushChangeApp, OnPushCmp, DefaultCmp } from './change-detection/onpush';
+import { ObservableChangeDectectionApp, ObservableCmp } from './change-detection/observable';
+
 
 let examples: ExampleDef[] = [
  {label: 'Styling', name: 'Styling', path: 'styling', component: StylesApp },
@@ -32,6 +35,10 @@ let examples: ExampleDef[] = [
  {label: 'Lifecycle', name: 'Lifecycle', path: 'lifecycle', component: LifecycleApp },
  {label: 'Template', name: 'Template', path: 'template', component: IfTemplateApp },
  {label: 'Template', name: 'Template', path: 'fortemplate', component: ForTemplateApp },
+ {label: 'ChangeDetection', name: 'ChangeDetection', path: 'changedetection', component: OnPushChangeApp },
+ {label: 'ChangeDetectionObservable', name: 'ChangeDetectionObservable', path: 'changeobservable', component: ObservableChangeDectectionApp },
+
+
 
 
 ]; 
@@ -56,7 +63,12 @@ const routes: Routes = examples
     OnChangeCmp,
     DoCheckCmp,
     DoCheckItem,
-    AftersCmp
+    AftersCmp,
+    OnPushChangeApp,
+    OnPushCmp,
+    DefaultCmp,
+    ObservableChangeDectectionApp,
+    ObservableCmp
   ],
   imports: [
     BrowserModule,

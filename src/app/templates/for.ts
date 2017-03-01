@@ -34,13 +34,6 @@ class NgBookRepeat implements DoCheck {
 				this.differ = this.differs.find(items).create(this.changeDetector);
 			}
 		}
-	// @Input() set ngBookRepeatOf(items) {
- //    this.items = items;
- //    if (this.items && !this.differ) {
- //      this.differ = this.differs.find(items).create(this.changeDetector);
- //    }
- //  }
-	
 
 	ngDoCheck(): void {
 		if(this.differ) {
@@ -61,8 +54,6 @@ class NgBookRepeat implements DoCheck {
 		}
 	};
 }
-
-
 
 @Component({
 	selector: 'for-app',
